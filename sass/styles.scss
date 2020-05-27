@@ -1,0 +1,201 @@
+//Primary
+
+$dark-blue: hsl(240, 38%, 20%);
+$grayish-blue: hsl(240, 18%, 77%);
+
+//Typography
+
+//Body Copy
+
+$default-font-size: 32px;
+
+//Font
+
+$font-family: 'Inter', sans-serif;
+$font-weights: (
+    "light": 300,
+    "medium": 500,
+    "bold": 700
+);
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    font-size: $default-font-size;
+    color: $dark-blue;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 49px;
+}
+
+.flex-container {
+        padding: 64px 94px 54px 95px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url(../images/pattern-bg.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top right;
+        div {
+            flex: 1;
+            //flex: auto;
+        }
+}
+
+.flex-container > :first-child {
+    background-image: url(../images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-size: 22%;
+    background-position: 22% 12%;
+
+    p {
+        padding-top: 75px;
+        margin-bottom: 20px;
+        width: 117%;
+        z-index: 1;
+        position: relative;
+        font-weight: 300;
+        line-height: 45px;
+        font-weight: map-get($font-weights, "light");
+    }
+    .name {
+        padding-top: 5px;
+        font-size: 20px;
+        font-weight: map-get($font-weights, "bold");
+    }
+    .title {
+        color: $grayish-blue;
+        font-weight: map-get($font-weights, "light");
+        }
+}
+.flex-container > :last-child {
+    .profile-image {
+        float: right;
+        box-shadow: 1px 32px 55px -45px rgba(32, 32, 70, 0.5);
+    }
+    position: relative;
+}
+
+.prev-next-container {
+    position: absolute;
+    bottom: -23px;
+    background: #fff;
+    left: 14%;
+    padding: 8px 8px;
+    border-radius: 35px;
+    box-shadow: 1px 16px 55px -15px rgba(32, 32, 70, 0.5);
+    a {
+        float: none !important;
+        margin: 10px 15px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .flex-container {
+        padding: 5px 5px;}
+}
+
+@media only screen and (max-width: 768px) {
+
+    .container {
+        margin-top: 24px;
+    }
+.flex-container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+    .profile-image {
+        float: none !important;
+    }
+}
+
+.flex-container > :first-child {
+    background-size: 9%;
+    background-position: 49% 0%;
+    p {
+    padding-top: 5px;
+    width: 100%;
+    line-height: 30px;
+    font-weight: 300;
+    font-size: 22px;
+    text-align: center;
+}
+
+}
+
+.flex-container > :last-child {
+    padding: 61px 35px;
+}
+
+.prev-next-container {
+    position: absolute;
+    bottom: 44px;
+    background: #fff;
+    left: 41%;
+    padding: 8px 8px;
+    border-radius: 35px;
+    box-shadow: 1px 16px 55px -15px rgba(32, 32, 70, 0.5);
+    a {
+        float: none !important;   
+        margin: 10px 15px;
+    }
+}
+
+}
+
+@media only screen and (max-width: 375px) {
+    .name {
+        span {
+            padding: 1px 8px;
+            &::before {
+              content: "\A";
+              white-space: pre;
+            }
+          }
+        }
+
+        
+    .flex-container > :first-child {
+        background-size: 13%;
+    p {
+        padding-top: 5px;
+        width: 100%;
+        line-height: 22px;
+        font-weight: 300;
+        font-size: 16px !important;
+        text-align: center;
+    }
+}
+    .flex-container > :last-child {
+        padding: 31px 35px;
+    }
+    
+
+    .prev-next-container {
+        position: absolute;
+        bottom: 18px;
+        background: #fff;
+        left: 37%;
+        padding: 1px 3px;
+        border-radius: 35px;
+        box-shadow: 1px 16px 55px -15px rgba(32, 32, 70, 0.5);
+        a {
+            float: none !important;
+            margin: 10px 12px;
+        }
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
